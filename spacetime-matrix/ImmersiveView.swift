@@ -13,12 +13,12 @@ struct ImmersiveView: View {
 
     var body: some View {
         RealityView { content in
-            // Create parent entity for point cloud
+            // Create a parent entity for the point cloud
             let pointCloudEntity = Entity()
             pointCloudEntity.name = "pointCloud"
             content.add(pointCloudEntity)
             
-            // Add a test box at (0,0,0)
+            // Optional: Add a reference box at (0,0,0) for debugging
             let box = ModelEntity(mesh: .generateBox(size: 0.1), materials: [SimpleMaterial(color: .red, isMetallic: false)])
             content.add(box)
         } update: { content in
@@ -27,7 +27,7 @@ struct ImmersiveView: View {
                !points.isEmpty {
                 pointCloudEntity.children.removeAll()
                 
-                // Calculate bounding box and center points
+                // Calculate the bounding box to find the center
                 var minPt = points[0]
                 var maxPt = points[0]
                 for pt in points {
@@ -39,18 +39,22 @@ struct ImmersiveView: View {
                     maxPt.z = max(maxPt.z, pt.z)
                 }
                 let center = (minPt + maxPt) / 2
-                let centeredPoints = points.map { $0 - center }
                 
-                // Create spheres for points
+                // Create spheres for the points
                 let sphereMesh = MeshResource.generateSphere(radius: 0.01)
                 let material = UnlitMaterial(color: .white)
                 
-                // Limit to 1000 points for performance (adjust as needed)
-                for point in centeredPoints.prefix(1000) {
+                for point in points.prefix(1000) {
+                    // Center the points by subtracting the center
+                    let centeredPoint = [point.x, point.y, -point.z] - center
                     let pointEntity = ModelEntity(mesh: sphereMesh, materials: [material])
-                    pointEntity.position = point
+                    pointEntity.position = centeredPoint
                     pointCloudEntity.addChild(pointEntity)
                 }
+                
+                // Translate the point cloud forward along Z-axis
+                let distance: Float = 2.0  // 2 meters in front of the viewer
+                pointCloudEntity.position = [0, 0, distance]
             }
         }
     }

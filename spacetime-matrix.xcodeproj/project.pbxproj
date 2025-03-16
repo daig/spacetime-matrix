@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC001AC82D86638200F76BE8 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = CC001AC72D86638200F76BE8 /* RealityKitContent */; };
 		CC001C8A2D866D4B00F76BE8 /* draco_point_cloud_wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC001C692D866D4B00F76BE8 /* draco_point_cloud_wrapper.mm */; };
 		CC001C8B2D866D4B00F76BE8 /* draco_decoder_wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC001C652D866D4B00F76BE8 /* draco_decoder_wrapper.mm */; };
 		CC001C8C2D866D4B00F76BE8 /* draco_encoder_wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC001C672D866D4B00F76BE8 /* draco_encoder_wrapper.mm */; };
@@ -239,7 +238,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC001AC82D86638200F76BE8 /* RealityKitContent in Frameworks */,
 				CC001C8F2D866E1B00F76BE8 /* libdraco.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,7 +628,6 @@
 			);
 			name = "spacetime-matrix";
 			packageProductDependencies = (
-				CC001AC72D86638200F76BE8 /* RealityKitContent */,
 			);
 			productName = "spacetime-matrix";
 			productReference = CC001AC22D86638200F76BE8 /* spacetime-matrix.app */;
@@ -899,13 +896,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CC001AC72D86638200F76BE8 /* RealityKitContent */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RealityKitContent;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CC001ABA2D86638200F76BE8 /* Project object */;
 }
