@@ -9,12 +9,11 @@ import SwiftUI
 
 @main
 struct spacetime_matrixApp: App {
-
     @State private var appModel = AppModel()
 
     var body: some Scene {
         WindowGroup {
-            ContentView() .environment(appModel)
+            ContentView().environment(appModel)
         }
 
         ImmersiveSpace(id: appModel.immersiveSpaceID) {
@@ -27,6 +26,6 @@ struct spacetime_matrixApp: App {
                     appModel.immersiveSpaceState = .closed
                 }
         }
-        .immersionStyle(selection: .constant(.progressive), in: .progressive)
+        .immersionStyle(selection: .constant(.full), in: .full) // Changed to .full
     }
 }
