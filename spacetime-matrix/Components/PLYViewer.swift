@@ -44,7 +44,9 @@ struct PLYViewer: View {
     
     var body: some View {
         ZStack {
-            SceneKitViewContainer(points: selectedPoints)
+//            SceneKitViewContainer(points: selectedPoints)
+            RealityKitViewContainer(points: selectedPoints)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             
             VStack {
                 if isPlayingPLYVideo {
