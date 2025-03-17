@@ -11,6 +11,7 @@
 		CC001C8B2D866D4B00F76BE8 /* draco_decoder_wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC001C652D866D4B00F76BE8 /* draco_decoder_wrapper.mm */; };
 		CC001C8C2D866D4B00F76BE8 /* draco_encoder_wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC001C672D866D4B00F76BE8 /* draco_encoder_wrapper.mm */; };
 		CC001C8F2D866E1B00F76BE8 /* libdraco.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC001C8D2D866E1B00F76BE8 /* libdraco.a */; };
+		CC001CDA2D87901800F76BE8 /* PointCloudMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC001CD92D87901800F76BE8 /* PointCloudMesh.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -210,6 +211,7 @@
 		CC001C862D866D4B00F76BE8 /* point_cloud_builder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = point_cloud_builder.h; sourceTree = "<group>"; };
 		CC001C882D866D4B00F76BE8 /* draco_features.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = draco_features.h; sourceTree = "<group>"; };
 		CC001C8D2D866E1B00F76BE8 /* libdraco.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdraco.a; sourceTree = "<group>"; };
+		CC001CD92D87901800F76BE8 /* PointCloudMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointCloudMesh.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -248,6 +250,7 @@
 		CC001AB92D86638200F76BE8 = {
 			isa = PBXGroup;
 			children = (
+				CC001CD92D87901800F76BE8 /* PointCloudMesh.swift */,
 				CC001C8E2D866E1B00F76BE8 /* Libraries */,
 				CC001AC42D86638200F76BE8 /* spacetime-matrix */,
 				CC001AC52D86638200F76BE8 /* Packages */,
@@ -685,6 +688,7 @@
 				CC001C8A2D866D4B00F76BE8 /* draco_point_cloud_wrapper.mm in Sources */,
 				CC001C8B2D866D4B00F76BE8 /* draco_decoder_wrapper.mm in Sources */,
 				CC001C8C2D866D4B00F76BE8 /* draco_encoder_wrapper.mm in Sources */,
+				CC001CDA2D87901800F76BE8 /* PointCloudMesh.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
